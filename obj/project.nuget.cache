@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "IDSftrJP9f9eOYRgKvqMRV6W+HRFeOuaAdojARggbqv+yJP9s3lf+wkhHBtQvIU7nOGNC8Y+36bLqnppCpua6w==",
+  "success": true,
+  "projectFilePath": "C:\\git\\VST_Dev\\Sine\\MonoFinity.Sine.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Steven\\.nuget\\packages\\nplug\\0.3.0.377\\nplug.0.3.0.377.nupkg.sha512",
+    "C:\\Users\\Steven\\.nuget\\packages\\nplug.proxy\\2.0.0\\nplug.proxy.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

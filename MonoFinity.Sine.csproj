@@ -7,4 +7,8 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NPlug" Version="0.3.0.377" />
+  </ItemGroup>
+
 </Project>

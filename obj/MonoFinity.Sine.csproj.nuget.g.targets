@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)nplug.proxy\2.0.0\build\NPlug.Proxy.targets" Condition="Exists('$(NuGetPackageRoot)nplug.proxy\2.0.0\build\NPlug.Proxy.targets')" />
+    <Import Project="$(NuGetPackageRoot)nplug\0.3.0.377\build\NPlug.targets" Condition="Exists('$(NuGetPackageRoot)nplug\0.3.0.377\build\NPlug.targets')" />
+  </ImportGroup>
+</Project>

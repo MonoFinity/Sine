@@ -1,0 +1,141 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "NPlug/0.3.0.377": {
+        "type": "package",
+        "dependencies": {
+          "NPlug.Proxy": "2.0.0"
+        },
+        "compile": {
+          "lib/net7.0/NPlug.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/NPlug.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/NPlug.targets": {}
+        }
+      },
+      "NPlug.Proxy/2.0.0": {
+        "type": "package",
+        "build": {
+          "build/NPlug.Proxy.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NPlug/0.3.0.377": {
+      "sha512": "SMd82AifDvAwkQyEyzvhlJkLP9qI5Cu39VzoAPBfO59EMzxYdIV6FxnpQSfXUnl8Y+R7l0qRbahKRXtSE90iiw==",
+      "type": "package",
+      "path": "nplug/0.3.0.377",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NPlug.png",
+        "build/NPlug.targets",
+        "build/NPlugFactoryExport.cs",
+        "lib/net7.0/NPlug.dll",
+        "lib/net7.0/NPlug.xml",
+        "nplug.0.3.0.377.nupkg.sha512",
+        "nplug.nuspec",
+        "readme.md"
+      ]
+    },
+    "NPlug.Proxy/2.0.0": {
+      "sha512": "Rs65TCAAJ9lzqYC4q+2l//1U/+LU+2rNRS2aGRJxO0iRFeXejXxGiowXlULIW+umC4HNCLyFcK3bgDH6BNCQtg==",
+      "type": "package",
+      "path": "nplug.proxy/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NPlug.png",
+        "build/AudioPluginProxy.cs",
+        "build/NPlug.Proxy.targets",
+        "build/linux-arm64/native/libnplug_proxy.so",
+        "build/linux-x64/native/libnplug_proxy.so",
+        "build/osx-arm64/native/libnplug_proxy.dylib",
+        "build/osx-x64/native/libnplug_proxy.dylib",
+        "build/win-arm64/native/nplug_proxy.dll",
+        "build/win-x64/native/nplug_proxy.dll",
+        "nplug.proxy.2.0.0.nupkg.sha512",
+        "nplug.proxy.nuspec",
+        "readme.md"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "NPlug >= 0.3.0.377"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Steven\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\git\\VST_Dev\\Sine\\MonoFinity.Sine.csproj",
+      "projectName": "MonoFinity.Sine",
+      "projectPath": "C:\\git\\VST_Dev\\Sine\\MonoFinity.Sine.csproj",
+      "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
+      "outputPath": "C:\\git\\VST_Dev\\Sine\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Steven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "NPlug": {
+            "target": "Package",
+            "version": "[0.3.0.377, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

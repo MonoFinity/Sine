@@ -49,21 +49,15 @@ namespace NPlug.Sine
         public SineProcessor() : base(AudioSampleSizeSupport.Float32)
         {
             sineWaveGenerator = new SineWaveGenerator(ProcessSetupData.SampleRate);
-            midiToAudioParameterMap[AudioMidiControllerNumber.SomeNote] = new AudioParameter();
         }
 
         protected override void ProcessMain(in AudioProcessData data)
         {
             // Check for MIDI key press and set frequency
-
-            // Get MIDI data
-
-
             data.Input.ParameterChanges.GetParameterData(0, out var midiControllerNumber, out var valueNormalized);
 
             if (TryGetMidiControllerAssignment(busIndex, channel, midiControllerNumber, out var audioParameterId))
             {
-                // Do something with audioParameterId, like setting the frequency
                 sineWaveGenerator.SetFrequencyFromMidiNote(audioParameterId.Value);
             }
 
