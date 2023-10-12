@@ -1,15 +1,16 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
 
 
 namespace NPlug.Sine
 {
     public class SineWaveGenerator
     {
-        private double frequency;
-        private double sampleRate;
-        private double phase;
+        double frequency;
+        readonly double sampleRate;
+        double phase;
 
-        private Dictionary<AudioMidiControllerNumber, AudioParameter> midiToAudioParameterMap = new Dictionary<AudioMidiControllerNumber, AudioParameter>();
 
 
         public SineWaveGenerator(double sampleRate)
@@ -27,22 +28,22 @@ namespace NPlug.Sine
         {
             float sample = (float)Math.Sin(2 * Math.PI * frequency * phase / sampleRate);
             phase++;
-            if (phase >= sampleRate)
-            {
-                phase -= sampleRate;
-            }
+
+            if (phase >= sampleRate) phase -= sampleRate;
+
             return sample;
         }
     }
 
+
+
     public class SineProcessor : AudioProcessor<SineModel>, IAudioControllerMidiMapping
     {
-        public static readonly Guid ClassId = new();//what should I enter here?  how do I get a ClassId?
-
-        private SineWaveGenerator sineWaveGenerator;
-        private object midiToAudioParameterMap;
-
+        public static readonly Guid ClassId = new("7a3b3b1a-0b1a-4b1a-8b1a-9b1a9b1a9b1a");
         public override Guid ControllerClassId => SineController.ClassId;
+
+        readonly SineWaveGenerator sineWaveGenerator;
+        readonly Dictionary<AudioMidiControllerNumber, AudioParameter> midiToAudioParameterMap = new();
 
         int IAudioController.ParameterCount => throw new NotImplementedException();
 
@@ -60,8 +61,6 @@ namespace NPlug.Sine
             {
                 sineWaveGenerator.SetFrequencyFromMidiNote(audioParameterId.Value);
             }
-
-
 
             // Generate sine wave sample and add to output
             float sineSample = sineWaveGenerator.GenerateSample();
