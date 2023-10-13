@@ -11,8 +11,7 @@ namespace NPlug.Sine
         readonly double sampleRate;
         double phase;
 
-
-
+ 
         public SineWaveGenerator(double sampleRate)
         {
             this.sampleRate = sampleRate;
